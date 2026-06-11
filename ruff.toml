@@ -1,0 +1,10 @@
+[lint]
+select = ["E", "F", "W"]
+ignore = [
+    "E301",  # blank lines between methods (existing style)
+    "E302",  # blank lines between functions
+    "E303",  # too many blank lines
+]
+
+[lint.per-file-ignores]
+"tests/*" = ["F401"]  # imported but unused (re-export pattern in tests)
